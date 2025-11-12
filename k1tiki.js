@@ -40,17 +40,17 @@ const catQuiz = {
         Stesha: {
             title: "ТИ СТЕША",
             description: "Ти - втілення затишку та розслабленості! Ти цінуєш комфорт понад усе і вмієш насолоджуватися кожним моментом спокою. Твоя філософія - життя занадто коротке, щоб поспішати.",
-            gif: "https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif"
+            gif: "https://media.giphy.com/media/WSVInnhixZGmUlS8pg/giphy.gif"
         },
         Himars: {
             title: "ТИ ХАЙМАРС", 
             description: "Ти - вічна дитина з великим запасом енергії! Ти перетворюєш рутину на гру і знаходиш радість у дрібницях. З тобою ніколи не нудно, ти заряжаєш оптимізмом всіх навколо.",
-            gif: "https://media.giphy.com/media/CqVNnHdR3Yg36/giphy.gif"
+            gif: "https://media.giphy.com/media/kJVgPcT5NL4TH4G9GN/giphy.gif"
         },
         Baghira: {
             title: "ТИ БАГІРА",
             description: "Ти - цілеспрямований та активний дослідник! Тобі важливо досягати цілей та підкоряти нові висоти. Ти швидко приймаєш рішення і завжди готовий до пригод.",
-            gif: "https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif"
+            gif: "https://media.giphy.com/media/WMji2SYhezHHYi2eDM/giphy.gif"
         }
     }
 };

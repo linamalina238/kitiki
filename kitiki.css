@@ -348,4 +348,21 @@ body {
     .quiz-container h2, .create-container h2, .quizzes-container h2 {
         font-size: 2rem;
     }
+    .xaymars {
+    max-width: 200px;
+    border-radius: 15px;
+    margin: 1rem auto;
+    display: block;
+}
+
+.menu-image, .quiz-image {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.menu-image img, .quiz-image img {
+    max-width: 250px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
 }
