@@ -172,7 +172,7 @@ function showResults() {
             <div class="results-container">
                 <h3>Результати тесту!</h3>
                 <div class="result-gif">
-                    <img src="xaymars.gif" alt="Результат" style="max-width: 300px; border-radius: 15px; margin: 1rem 0;">
+                    <img src="https://media.giphy.com/media/3o7aD2vOBqFNLb0Hk4/giphy.gif" alt="Результат" style="max-width: 300px; border-radius: 15px; margin: 1rem 0;">
                 </div>
                 <div class="score">${score}/${totalQuestions}</div>
                 <p>Ви відповіли на ${score} з ${totalQuestions} питань</p>
