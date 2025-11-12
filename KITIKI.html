@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Creator</title>
+    <link rel="stylesheet" href="kitiki.css">
+</head>
+<body>
+
+    <!-- Главное меню -->
+    <section id="main-menu" class="page active">
+        <div class="header-nav">
+            <button class="nav-btn" onclick="showMainMenu()">Головне меню</button>
+            <button class="nav-btn" onclick="showMyQuizzes()">Мої тестіки</button>
+        </div>
+        
+        <div class="menu-container">
+            <div class="menu-content">
+                <div class="menu-text">
+                    <h1 class="main-title">Тестіки</h1>
+                    <div class="menu-buttons">
+                        <button class="menu-btn" onclick="showQuiz()">Пройти тестік: який ти кітик</button>
+                        <button class="menu-btn" onclick="showCreateQuiz()">Створити свій тестік</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Пройти тест -->
+    <section id="quiz-page" class="page">
+        <div class="header-nav">
+            <button class="nav-btn" onclick="showMainMenu()">Головне меню</button>
+            <button class="nav-btn" onclick="showMyQuizzes()">Мої тестіки</button>
+        </div>
+        <div class="container">
+            <div class="quiz-container">
+                <h2 id="quiz-title">Тест: Який ти кітік?</h2>
+                <div id="quiz-content"></div>
+                <div class="quiz-nav">
+                    <button class="nav-btn" id="prev-btn" onclick="prevQuestion()">Назад</button>
+                    <button class="nav-btn" id="next-btn" onclick="nextQuestion()">Далі</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Создать тест -->
+    <section id="create-quiz" class="page">
+        <div class="header-nav">
+            <button class="nav-btn" onclick="showMainMenu()">Головне меню</button>
+            <button class="nav-btn" onclick="showMyQuizzes()">Мої тестіки</button>
+        </div>
+        <div class="container">
+            <div class="create-container">
+                <h2>Створити свій тестік</h2>
+                
+                <div class="form-group">
+                    <input type="text" id="quiz-title-input" class="form-input" placeholder="Назва тестіка">
+                </div>
+                
+                <div id="questions-container"></div>
+                
+                <div class="form-buttons">
+                    <button class="action-btn" onclick="addQuestion()">Додати питання</button>
+                    <button class="action-btn" onclick="saveQuiz()">Зберегти</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Мои тесты -->
+    <section id="my-quizzes" class="page">
+        <div class="header-nav">
+            <button class="nav-btn" onclick="showMainMenu()">Головне меню</button>
+            <button class="nav-btn" onclick="showMyQuizzes()">Мої тестіки</button>
+        </div>
+        <div class="container">
+            <div class="quizzes-container">
+                <h2>Мої тести</h2>
+                <div id="quizzes-list"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="k1tiki.js"></script>
+</body>
+</html>

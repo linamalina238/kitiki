@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffcce6, #ffb3d9);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Навигация в шапке */
+.header-nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    padding: 1.5rem 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-btn, .action-btn {
+    background: linear-gradient(45deg, #ff80bf, #ff4da6);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 77, 166, 0.3);
+    font-weight: 600;
+}
+
+.nav-btn:hover, .action-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 77, 166, 0.4);
+}
+
+.nav-btn:active, .action-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Главное меню - белый прямоугольник справа */
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.page.active {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5%;
+    padding-top: 80px; /* Отступ для шапки */
+}
+
+.menu-container {
+    background: white;
+    border-radius: 25px;
+    padding: 3rem;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    width: 400px;
+    text-align: center;
+}
+
+.main-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    color: #ff4da6;
+    margin-bottom: 3rem;
+    text-shadow: 2px 2px 0 rgba(255, 204, 230, 0.5);
+}
+
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.menu-btn {
+    font-size: 1.3rem;
+    padding: 18px 35px;
+    background: linear-gradient(45deg, #ff80bf, #ff4da6);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 77, 166, 0.3);
+    font-weight: 600;
+}
+
+.menu-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 77, 166, 0.4);
+}
+
+.menu-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Контейнеры тестов */
+.quiz-container, .create-container, .quizzes-container {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: 100px auto 2rem;
+    max-width: 800px;
+}
+
+.quiz-container h2, .create-container h2, .quizzes-container h2 {
+    font-family: 'Pacifico', cursive;
+    color: #ff4da6;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Вопросы и варианты */
+.question {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.question h3 {
+    color: #ff4da6;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.option {
+    padding: 1rem;
+    border: 2px solid #ffcce6;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.option:hover {
+    border-color: #ff80bf;
+    background: #fff5fa;
+    transform: translateX(5px);
+}
+
+.option.selected {
+    background: linear-gradient(45deg, #ff80bf, #ff4da6);
+    color: white;
+    border-color: #ff4da6;
+    transform: translateX(10px);
+}
+
+.quiz-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+/* Форма создания */
+.form-input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #ffcce6;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #ff80bf;
+}
+
+.question-item {
+    background: #fff5fa;
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    border: 2px dashed #ffcce6;
+}
+
+.option-input {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    align-items: center;
+}
+
+.option-input input {
+    flex: 1;
+}
+
+.remove-btn {
+    background: #ff6666;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+    background: #ff3333;
+    transform: scale(1.05);
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Список тестов */
+.quiz-item {
+    background: #fff5fa;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    border: 2px solid #ffcce6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.quiz-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 77, 166, 0.2);
+}
+
+.quiz-item h3 {
+    color: #ff4da6;
+    margin: 0;
+}
+
+.quiz-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Результаты */
+.results-container {
+    text-align: center;
+    padding: 2rem;
+}
+
+.score {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff4da6;
+    margin: 1rem 0;
+    font-family: 'Pacifico', cursive;
+}
+
+.personality-result {
+    background: #fff5fa;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 1rem 0;
+    border: 2px solid #ffcce6;
+}
+
+.personality-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    color: #ff4da6;
+    margin-bottom: 1rem;
+}
+
+.personality-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header-nav {
+        justify-content: center;
+        padding: 1rem;
+    }
+    
+    .page.active {
+        justify-content: center;
+        padding: 2rem;
+        padding-top: 100px;
+    }
+    
+    .menu-container {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .menu-btn {
+        font-size: 1.1rem;
+        padding: 15px 25px;
+    }
+    
+    .quiz-item {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .form-buttons {
+        flex-direction: column;
+    }
+    
+    .quiz-container, .create-container, .quizzes-container {
+        margin: 120px auto 2rem;
+    }
+/*изображения*/
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.menu-left {
+    text-align: center;
+}
+
+.menu-image {
+    width: 250px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+}
