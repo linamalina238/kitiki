@@ -54,14 +54,21 @@ const catQuiz = {
     }
 };
 
-// Глобальные переменные
+
+
+
+
 let currentQuestion = 0;
 let userAnswers = [];
 let questionCount = 0;
 let currentQuiz = null;
 let isCustomQuiz = false;
 
-// страницы
+
+
+
+
+
 function showPage(pageId) {
     document.querySelectorAll('.page').forEach(page => {
         page.classList.remove('active');
@@ -88,7 +95,14 @@ function showMyQuizzes() {
     loadMyQuizzes();
 }
 
-// тест котики
+
+
+
+
+
+
+
+
 function loadQuiz(quiz) {
     currentQuiz = quiz;
     currentQuestion = 0;
@@ -124,7 +138,6 @@ function displayQuestion() {
     
     quizContent.innerHTML = html;
     
-  //опять кнопки
     document.getElementById('prev-btn').style.display = currentQuestion === 0 ? 'none' : 'block';
     document.getElementById('next-btn').textContent = 
         currentQuestion === currentQuiz.questions.length - 1 ? 'Завершити' : 'Далі';
@@ -163,7 +176,6 @@ function showResults() {
     const quizContent = document.getElementById('quiz-content');
     
     if (isCustomQuiz) {
-        // для созданных тестов
         const score = userAnswers.filter(answer => answer !== null).length;
         const totalQuestions = currentQuiz.questions.length;
         
@@ -181,7 +193,6 @@ function showResults() {
             </div>
         `;
     } else {
-        // Для теста про котов
         const personality = calculatePersonality();
         const result = currentQuiz.results[personality.type];
         
@@ -222,7 +233,6 @@ function calculatePersonality() {
         }
     });
     
-    // Находим доминирующий тип
     let maxScore = 0;
     let personalityType = 'Stesha';
     
@@ -239,7 +249,13 @@ function calculatePersonality() {
     };
 }
 
-// Создание теста
+
+
+
+
+
+
+
 function addQuestion() {
     questionCount++;
     const questionsContainer = document.getElementById('questions-container');
