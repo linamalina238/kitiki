@@ -57,7 +57,6 @@ const catQuiz = {
 
 
 
-
 let currentQuestion = 0;
 let userAnswers = [];
 let questionCount = 0;
